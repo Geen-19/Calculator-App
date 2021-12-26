@@ -142,33 +142,20 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:minWidth="70dp"
         android:text="9"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonDivide"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDivide" />
-
-    <Button
-        android:id="@+id/buttonDivide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:minWidth="70dp"
-        android:text="/"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
+        app:layout_constraintEnd_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/newNumber" />
 
     <Button
         android:id="@+id/buttonMultiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:minWidth="70dp"
         android:text="X"
-        app:layout_constraintEnd_toEndOf="@+id/buttonDivide"
         app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
+        app:layout_constraintTop_toTopOf="@+id/buttonRoot" />
 
     <Button
         android:id="@+id/buttonMinus"
@@ -189,6 +176,16 @@
         android:text="+"
         app:layout_constraintEnd_toEndOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="70dp"
+        android:text="/"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
         android:id="@+id/buttonDot"
@@ -215,7 +212,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <Button
         android:id="@+id/buttonClear"
@@ -223,7 +220,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="Clear"
-        app:layout_constraintStart_toEndOf="@+id/buttonDivide"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <Button
@@ -235,5 +232,16 @@
         android:text="ROOT"
         app:layout_constraintStart_toEndOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+
+    <Button
+        android:id="@+id/buttonNeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Neg"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRoot" />
 
 </android.support.constraint.ConstraintLayout>

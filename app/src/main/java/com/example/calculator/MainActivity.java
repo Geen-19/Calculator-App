@@ -1,13 +1,11 @@
 package com.example.calculator;
 
-import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -125,6 +123,27 @@ public class MainActivity extends AppCompatActivity {
         buttonPlus.setOnClickListener(OperationListener);
         buttonMinus.setOnClickListener(OperationListener);
         buttonEquals.setOnClickListener(OperationListener);
+
+        Button buttonNeg = (Button) findViewById(R.id.buttonNeg);
+
+        buttonNeg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String value = newNumber.getText().toString();
+                if(value.length() == 0){
+                    newNumber.setText("-");
+                }
+                else{
+                    try{
+                        Double doubleValue = Double.valueOf(value);
+                        doubleValue *= -1;
+                        newNumber.setText(doubleValue.toString());
+                    }catch(NumberFormatException e ){
+                        newNumber.setText("");
+                    }
+                }
+            }
+        });
     }
 
 
